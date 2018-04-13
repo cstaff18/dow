@@ -43,35 +43,29 @@ if __name__=='__main__':
     # choose either the sine wave data or stock data
     # sine wave data
     #X_train, y_train, X_test, y_test = lstm.load_data('../data/sinwave.csv', seq_len, False) # data is sine wave, already normalized
-    X_train, y_train, X_test, y_test = lstm.load_data('../data/sp500.csv', seq_len, True) # data is sine wave, already normalized
+    X_train, y_train, X_test, y_test = lstm.load_data('../data/intc_nonamedate.csv', seq_len, True) # data is sine wave, already normalized
 
     # stock data
     #X_train, y_train, X_test, y_test = lstm.load_data('../data/sp500.csv', seq_len, True) # data is a stock, normalize data is True
 
-    print('> Data Loaded. Compiling...')
-
-    model = lstm.build_model([1, seq_len, 100, 1]) # 1 input layer, layer 1 has seq_len neurons, layer 2 has 100 neurons, 1 output
-
-    model.fit(
-        X_train,
-        y_train,
-        batch_size=512,
-        nb_epoch=epochs,
-        validation_split=0.05)
-
-    print('> Completed.')
-    print('Training duration (s) : ', time.time() - global_start_time)
-
-    # comment out either sine wave prediction code or stock prediction code
-    # sine wave code
-    #predicted = lstm.predict_point_by_point(model, X_test)
-    #plot_results(predicted, y_test, 'Sine wave - predict one point ahead')
-    #plot_results(predicted, y_test, 'S&P500 wave - predict one point ahead')
-
-    #predicted_full = lstm.predict_sequences_full(model, X_test, seq_len,50)
-    #plot_results(predicted_full, y_test, 'Sine wave - predict full sequence from start seed')
-    #plot_results(predicted_full, y_test, 'S&P500 wave - predict full sequence from start seed')
-
-    # stock prediction code
-    predictions = lstm.predict_sequences_multiple(model, X_test, seq_len, seq_len) #model, data, window_size, prediction length)
-    plot_results_multiple(predictions, y_test, seq_len) # prediction, true data, prediction length)
+    print(X_train)
+    print('-------------')
+    print(y_train)
+    # print('> Data Loaded. Compiling...')
+    #
+    # model = lstm.build_model([1, seq_len, 100, 1]) # 1 input layer, layer 1 has seq_len neurons, layer 2 has 100 neurons, 1 output
+    #
+    # model.fit(
+    #     X_train,
+    #     y_train,
+    #     batch_size=512,
+    #     nb_epoch=epochs,
+    #     validation_split=0.05)
+    #
+    # print('> Completed.')
+    # print('Training duration (s) : ', time.time() - global_start_time)
+    #
+    #
+    # # stock prediction code
+    # predictions = lstm.predict_sequences_multiple(model, X_test, seq_len, seq_len) #model, data, window_size, prediction length)
+    # plot_results_multiple(predictions, y_test, seq_len) # prediction, true data, prediction length)
