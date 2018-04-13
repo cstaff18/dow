@@ -12,8 +12,8 @@
 
 Our initial dataset consisted of the 30 Dow Jones Industrial Average stocks. We decided to choose only one stock, INTC, in order to produce a working model within the time allotted.
 
-* Train window : 90 days
-* Prediction window : 10 days
+* Train window : ? days
+* Prediction window : 30 days
 
 <img alt="intro" src="figs/Screen Shot 2018-04-13 at 3.36.53 PM.png" width='500'>
 
@@ -43,6 +43,8 @@ Our initial dataset consisted of the 30 Dow Jones Industrial Average stocks. We 
 #### Best Model
 <img alt="intro" src="figs/fig_use.png" width='500'>
 
+<img alt="intro" src="figs/Screen Shot 2018-04-13 at 3.49.18 PM.png" width='500'>
+
 
 
 #### Other Models
@@ -67,4 +69,4 @@ After the 30 days we **buy** it back.
 
 #### Buy and Hold Strategy
 
-26.02% Growth over 
+26.02% Growth over
