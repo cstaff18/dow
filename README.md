@@ -1,5 +1,6 @@
 #### Architecture
 
+<img alt="intro" src="figs/arch.png" width='500'>
 
 
 #### Model Selection
@@ -10,6 +11,18 @@
 |20 day training, 30 day predict, batch size = 5, epochs = 3| 0.0029|
 |30 day training, 30 day predict, batch size = 5, epochs = 3| 0.1344|
 |40 day training, 30 day predict, batch size = 5, epochs = 3| 0.1904|
+
+#### Best Model
+<img alt="intro" src="figs/fig_use.png" width='500'>
+
+
+
+#### Other Models
+
+<img alt="intro" src="figs/fig_2.png" width='500'>
+
+<img alt="intro" src="figs/fig_5.png" width='500'>
+
 
 
 #### Our Trading Strategy:
