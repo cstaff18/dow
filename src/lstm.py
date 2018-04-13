@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore") #Hide messy Numpy warnings
 def load_data(filename, seq_len, normalise_window):
     df = pd.read_csv(filename,index_col = 0)
     data = df.values
-    sequence_length = seq_len + 1
+    sequence_length = seq_len 
     result = []
     for index in range(len(data) - sequence_length):
         result.append(data[index: index + sequence_length])
